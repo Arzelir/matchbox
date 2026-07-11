@@ -48,6 +48,7 @@ function Home() {
     useEffect(() => {
         getUserById(1)
             .then(data => {
+                setUsers([data]);
                 console.log("Received:", data);
             })
             .catch(error => {
