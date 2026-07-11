@@ -9,6 +9,8 @@ import "./App.css";
 import Dashboard from "./pages/Dashboard";
 import Home from "./pages/Home";
 
+import Match from "./pages/Match";
+
 function App() {
 	const [count, setCount] = useState(0);
 
@@ -19,25 +21,8 @@ function App() {
 				<Route path="/" element={<Home />} />
 
 				<Route path="/dashboard" element={<Dashboard />} />
+				<Route path="/match" element={<Match />} />
 			</Routes>
-			<h1>
-				UofT Website <br /> Development Club
-			</h1>
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-			<h2>Real development skills for real projects. </h2>
-      <h1>
-				UofT Website <br /> Development Club
-			</h1>
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-			<h2>Real development skills for real projects. </h2>
 		</BrowserRouter>
 	);
 }

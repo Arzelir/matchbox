@@ -70,17 +70,29 @@ h1 {
 	font-size: 4vw;
 	line-height: 1.1;
 	font-weight: 700;
+	padding-left: 2vw;
+	padding-right: 2vw;
 }
 
 h2 {
-	font-size: 2vw;
+	font-size: 3vw;
 	font-variant-caps: small-caps;
 	font-weight: 700;
+	padding-left: 2vw;
+	padding-right: 2vw;
 }
 
 h3 {
-	font-size: 1.25vw;
+	font-size: 2vw;
 	font-weight: 500;
+	padding-left: 2vw;
+	padding-right: 2vw;
+}
+
+p {
+	font-size: 1.5vw;
+	padding-left: 2vw;
+	padding-right: 2vw;
 }
 
 button {
