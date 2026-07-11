@@ -20,6 +20,24 @@ function App() {
 
 				<Route path="/dashboard" element={<Dashboard />} />
 			</Routes>
+			<h1>
+				UofT Website <br /> Development Club
+			</h1>
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+			<h2>Real development skills for real projects. </h2>
+      <h1>
+				UofT Website <br /> Development Club
+			</h1>
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+			<h2>Real development skills for real projects. </h2>
 		</BrowserRouter>
 	);
 }

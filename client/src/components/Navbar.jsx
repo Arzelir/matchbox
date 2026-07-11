@@ -1,70 +1,73 @@
-import { Link } from "react-router-dom";
 import "./Navbar.css";
-import logo from "../assets/react.svg";
+
+import logo from "../assets/logoColour.png";
+
+import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
+
 import { FaInstagram, FaGithub, FaLinkedin } from "react-icons/fa";
 
 export default function Navbar() {
 	return (
 		<nav className="navbar">
+			{/* LOGO */}
 			<div className="nav-logo">
-				<a href="/#home">
-					<img src={logo} alt="Web Dev Logo" />
-				</a>
+				<Link to="/">
+					<img src={logo} alt="Logo" />
+				</Link>
 			</div>
 
-			<div className="nav-container">
-				<ul className="nav-links">
-					<li>
-						<a href="/#home">Home</a>
-					</li>
-					<li>
-						<a href="/#about">About</a>
-					</li>
-					<li>
-						<a href="/#team">The Team</a>
-					</li>
-					<li>
-						<a href="/#projects">Projects</a>
-					</li>
+			{/* NAVIGATION */}
+			<ul className="nav-links">
+				{/* HOME */}
+				<li className="dropdown">
+					<Link to="/">Home</Link>
+				</li>
 
-					<li>
-						<a>|</a>
-					</li>
+				{/* DESIGN */}
+				<li className="dropdown">
+					<Link to="/allevents">Events</Link>
+				</li>
 
-					<li>
-						<a
-							className="nav-right"
-							href="https://instagram.com/yourusername"
-							target="_blank"
-							rel="noopener noreferrer"
-						>
-							<FaInstagram />
-						</a>
-					</li>
+				{/* DEVELOPMENT */}
+				<li className="dropdown">
+					<Link to="/contact">Contact</Link>
+				</li>
 
-					<li>
-						<a
-							className="nav-right"
-							href="https://github.com/yourusername"
-							target="_blank"
-							rel="noopener noreferrer"
-						>
-							<FaGithub />
-						</a>
-					</li>
+				<li className="divider">|</li>
 
-					<li>
-						<a
-							className="nav-right"
-							href="https://linkedin.com/in/yourusername"
-							target="_blank"
-							rel="noopener noreferrer"
-						>
-							<FaLinkedin />
-						</a>
-					</li>
-				</ul>
-			</div>
+				{/* SOCIALS */}
+
+				<li>
+					<a
+						href="https://instagram.com/design.shatat"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						<FaInstagram />
+					</a>
+				</li>
+
+				<li>
+					<a
+						href="https://github.com/shatat-ah"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						<FaGithub />
+					</a>
+				</li>
+
+				<li>
+					<a
+						href="https://linkedin.com/in/yourusername"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						<FaLinkedin />
+					</a>
+				</li>
+			</ul>
 		</nav>
 	);
 }
