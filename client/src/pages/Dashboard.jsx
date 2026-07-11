@@ -30,7 +30,7 @@ function Home() {
             });
     }, []);
 
-        useEffect(() => {
+    useEffect(() => {
         getTeams()
             .then(data => {
                 console.log("Received:", data);
@@ -62,6 +62,13 @@ function Home() {
                         <h2>{user.name}</h2>
                         <p>{user.email}</p>
                         <p>{user.description}</p>
+                    </li>
+                ))}
+
+                {teams.map(team => (
+                    <li key={team.team_id}>
+                        <h2>{team.name}</h2>
+                        <p>{team.event}</p>
                     </li>
                 ))}
             </ul>
