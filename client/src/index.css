@@ -44,11 +44,11 @@ a,
 p {
 	font-size: 2.5vw;
 	font-weight: 500;
-	color: #00dca7;
+	color: #ffbb00;
 	text-decoration: inherit;
 }
 a:hover {
-	color: #00dca7;
+	color: #ffbb00;
 }
 
 body {
@@ -57,7 +57,7 @@ body {
 	width: 100%;
 	min-height: 100vh;
 
-	background-image: url("/bg.png");
+	background: linear-gradient(to top, rgb(143, 53, 11), rgb(87, 8, 8));
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-attachment: fixed;
@@ -95,7 +95,7 @@ button {
 	transition: border-color 0.25s;
 }
 button:hover {
-	border-color: #00dca7;
+	border-color: #ffbb00;
 }
 button:focus,
 button:focus-visible {
