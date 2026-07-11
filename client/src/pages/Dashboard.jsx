@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getEvents, getUsers, getTeams } from "../services/api";
+import { getEvents, getUsers, getTeams, getUserById } from "../services/api";
 
 
 function Home() {
@@ -8,6 +8,7 @@ function Home() {
     const [users, setUsers] = useState([]);
     const [teams, setTeams] = useState([]);
 
+    // Fetching data from API for Events
     useEffect(() => {
         getEvents()
             .then(data => {
@@ -19,6 +20,7 @@ function Home() {
             });
     }, []);
 
+    // Fetching data from API for Users
     useEffect(() => {
         getUsers()
             .then(data => {
@@ -30,11 +32,23 @@ function Home() {
             });
     }, []);
 
+    // Fetching data from API for Teams
     useEffect(() => {
         getTeams()
             .then(data => {
                 console.log("Received:", data);
                 setTeams(data);
+            })
+            .catch(error => {
+                console.error("Error:", error);
+            });
+    }, []);
+
+    // Fetching a single user by ID (example with user ID 1)
+    useEffect(() => {
+        getUserById(1)
+            .then(data => {
+                console.log("Received:", data);
             })
             .catch(error => {
                 console.error("Error:", error);

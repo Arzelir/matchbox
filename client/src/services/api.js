@@ -12,6 +12,12 @@ export async function getUserById(userId) {
     return response.json();
 }
 
+// Getting a single user by email
+export async function getUserByEmail(email) {
+    const response = await fetch(`/api/users?type=email&email=${email}`);
+    return response.json();
+}
+
 // Creating a new user
 export async function createUser(userData) {
     const response = await fetch("/api/users", {
