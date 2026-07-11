@@ -4,7 +4,7 @@ import { HiCheck, HiX } from "react-icons/hi";
 export default function Match() {
 	// Placeholder data
 	const currentMatch = {
-		image: "https://placehold.co/720x1280?text=9%3A16+Photo",
+		image: "/bg.png",
 		title: "John Doe",
 		age: 24,
 		location: "Toronto, ON",
