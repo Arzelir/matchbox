@@ -7,7 +7,7 @@ function Home() {
     const [events, setEvents] = useState([]);
 
     useEffect(() => {
-        getEvent()
+        getEvents()
             .then(data => {
                 console.log("Received:", data);
                 setEvents(data);
