@@ -21,16 +21,16 @@ function Home() {
     }, []);
 
     // Fetching data from API for Users
-    useEffect(() => {
-        getUsers()
-            .then(data => {
-                console.log("Received:", data);
-                setUsers(data);
-            })
-            .catch(error => {
-                console.error("Error:", error);
-            });
-    }, []);
+    // useEffect(() => {
+    //     getUsers()
+    //         .then(data => {
+    //             console.log("Received:", data);
+    //             setUsers(data);
+    //         })
+    //         .catch(error => {
+    //             console.error("Error:", error);
+    //         });
+    // }, []);
 
     // Fetching data from API for Teams
     useEffect(() => {
