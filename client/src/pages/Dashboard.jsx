@@ -67,8 +67,8 @@ function Home() {
 
                 {teams.map(team => (
                     <li key={team.team_id}>
-                        <h2>{team.name}</h2>
-                        <p>{team.event}</p>
+                        <h2>{team.team_name}</h2>
+                        <p>{team.event_name}</p>
                     </li>
                 ))}
             </ul>
