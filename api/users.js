@@ -1,45 +1,54 @@
-import db from "./db.js";
-
 export default async function handler(req, res) {
-    const { type, id, email } = req.query;
 
-    let result;
+    if (req.method === "GET") {
 
-    switch (type) {
-        case "all":
-            result = await db.execute(`
-                SELECT name, picture_path, email, description
-                FROM User
-            `);
-            break;
+        const { id, email } = req.query;
 
-        case "id":
+        let result;
+
+        if (id) {
             result = await db.execute({
                 sql: `
-                    SELECT name, picture_path, email, description
+                    SELECT *
                     FROM User
                     WHERE user_id = ?
                 `,
                 args: [id]
             });
-            break;
 
-        case "email":
+        } else if (email) {
             result = await db.execute({
                 sql: `
-                    SELECT name, picture_path, email, description
+                    SELECT *
                     FROM User
                     WHERE email = ?
                 `,
                 args: [email]
             });
-            break;
 
-        default:
-            return res.status(400).json({
-                error: "Invalid query type"
-            });
+        } else {
+            result = await db.execute(`
+                SELECT *
+                FROM User
+            `);
+        }
+
+        return res.status(200).json(result.rows);
     }
 
-    res.status(200).json(result.rows);
+
+    if (req.method === "POST") {
+        // create user
+    }
+
+
+    if (req.method === "PUT") {
+        // update user
+    }
+
+
+    if (req.method === "DELETE") {
+        // delete user
+    }
+
 }
