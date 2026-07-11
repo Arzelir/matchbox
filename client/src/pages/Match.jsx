@@ -28,14 +28,6 @@ export default function Match() {
 						<h3>{currentMatch.location}</h3>
 
 						<p>{currentMatch.bio}</p>
-
-						<div className="interest-container">
-							{currentMatch.interests.map((interest, index) => (
-								<span className="interest-tag" key={index}>
-									{interest}
-								</span>
-							))}
-						</div>
 					</section>
 
 					<section className="match-buttons">
