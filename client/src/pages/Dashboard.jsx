@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react";
-import { getEvents } from "../services/api";
+import { getEvents, getUsers, getTeams } from "../services/api";
 
 
 function Home() {
 
     const [events, setEvents] = useState([]);
+    const [users, setUsers] = useState([]);
+    const [teams, setTeams] = useState([]);
 
     useEffect(() => {
         getEvents()
@@ -17,9 +19,27 @@ function Home() {
             });
     }, []);
 
-    console.log("State before render:", events);
-console.log("Array?", Array.isArray(events));
+    useEffect(() => {
+        getUsers()
+            .then(data => {
+                console.log("Received:", data);
+                setUsers(data);
+            })
+            .catch(error => {
+                console.error("Error:", error);
+            });
+    }, []);
 
+        useEffect(() => {
+        getTeams()
+            .then(data => {
+                console.log("Received:", data);
+                setTeams(data);
+            })
+            .catch(error => {
+                console.error("Error:", error);
+            });
+    }, []);
 
     return (
 
@@ -28,15 +48,20 @@ console.log("Array?", Array.isArray(events));
             <ul>
                 {events.map((event) => (
                     <li key={event.event_id}>
-                        <img 
-                            src={event.picture_path}
-                            alt={event.name}
-                            width="100"
-                        />
-
                         <h2>{event.name}</h2>
-
+                        <p>{event.date}</p>
+                        <p>{event.location}</p>
+                        <p>{event.sport}</p>
+                        <p>{event.max_players}</p>
                         <p>{event.description}</p>
+                    </li>
+                ))}
+
+                {users.map(user => (
+                    <li key={user.user_id}>
+                        <h2>{user.name}</h2>
+                        <p>{user.email}</p>
+                        <p>{user.description}</p>
                     </li>
                 ))}
             </ul>

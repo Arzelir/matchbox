@@ -89,3 +89,11 @@ export async function deleteEvent(eventId) {
     });
     return response.json();
 }
+
+// Team functions
+
+// Getting all teams
+export async function getTeams() {
+    const response = await fetch("/api/team");
+    return response.json();
+}
