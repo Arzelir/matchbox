@@ -6,7 +6,6 @@ import reactLogo from "./assets/react.svg";
 import viteLogo from "./assets/vite.svg";
 import heroImg from "./assets/hero.png";
 import "./App.css";
-import Dashboard from "./pages/Dashboard";
 import Home from "./pages/Home";
 
 import Match from "./pages/Match";
@@ -20,7 +19,6 @@ function App() {
 			<Routes>
 				<Route path="/" element={<Home />} />
 
-				<Route path="/dashboard" element={<Dashboard />} />
 				<Route path="/match" element={<Match />} />
 			</Routes>
 		</BrowserRouter>
