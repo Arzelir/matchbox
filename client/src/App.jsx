@@ -6,9 +6,10 @@ import reactLogo from "./assets/react.svg";
 import viteLogo from "./assets/vite.svg";
 import heroImg from "./assets/hero.png";
 import "./App.css";
-import Home from "./pages/Home";
 import Dashboard from "./pages/Dashboard";
 
+import Home from "./pages/Home";
+import Contact from "./pages/Contact";
 import Match from "./pages/Match";
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
 				<Route path="/dashboard" element={<Dashboard />} />
 
 				<Route path="/match" element={<Match />} />
+				<Route path="/contact" element={<Contact />} />
 			</Routes>
 		</BrowserRouter>
 	);
