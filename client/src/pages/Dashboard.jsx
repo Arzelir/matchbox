@@ -65,11 +65,11 @@ function Home() {
                     </li>
                 ))}
 
-                {teams.map(team => (
-                    <li key={team.team_id}>
+                {teams.map((team) => (
+                    <div key={team.team_name}>
                         <h2>{team.team_name}</h2>
                         <p>{team.event_name}</p>
-                    </li>
+                    </div>
                 ))}
             </ul>
         </div>
