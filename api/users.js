@@ -1,3 +1,5 @@
+import db from "./db.js";
+
 export default async function handler(req, res) {
 
     if (req.method === "GET") {
@@ -35,20 +37,4 @@ export default async function handler(req, res) {
 
         return res.status(200).json(result.rows);
     }
-
-
-    if (req.method === "POST") {
-        // create user
-    }
-
-
-    if (req.method === "PUT") {
-        // update user
-    }
-
-
-    if (req.method === "DELETE") {
-        // delete user
-    }
-
 }
