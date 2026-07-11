@@ -1,4 +1,4 @@
-import { getUsers } from "./services/api.js";
+import { getUsers } from "../services/api.js";
 
 
 function Home() {
