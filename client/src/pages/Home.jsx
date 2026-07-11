@@ -8,6 +8,7 @@ function Home() {
         useEffect(() => {
             getUsers()
                 .then(setUsers);
+                console.log(users)
         }, []);
 
     return (
