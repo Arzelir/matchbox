@@ -9,8 +9,11 @@ function Home() {
     useEffect(() => {
         getUsers()
             .then(data => {
-                console.log("API data:", data);
+                console.log("Received:", data);
                 setUsers(data);
+            })
+            .catch(error => {
+                console.error("Error:", error);
             });
     }, []);
 
@@ -20,8 +23,10 @@ function Home() {
             <h1>Home Page Test</h1>
             <h1>Dashboard</h1>
             <ul>
-                {Array.isArray(users) && users.map(user => (
-                    <li key={user.id}>{user.name}</li>
+                {users.map((user) => (
+                    <li key={user.id}>
+                        {JSON.stringify(user)}
+                    </li>
                 ))}
             </ul>
         </div>
