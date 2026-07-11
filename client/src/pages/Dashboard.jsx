@@ -44,18 +44,6 @@ function Home() {
             });
     }, []);
 
-    // Fetching a single user by ID (example with user ID 1)
-    useEffect(() => {
-        getUserById(1)
-            .then(data => {
-                setUsers([data]);
-                console.log("Received:", data);
-            })
-            .catch(error => {
-                console.error("Error:", error);
-            });
-    }, []);
-
     return (
 
         <div>
