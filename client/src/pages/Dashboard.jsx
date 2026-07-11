@@ -27,8 +27,16 @@ console.log("Array?", Array.isArray(users));
             <h1>Dashboard page test</h1>
             <ul>
                 {users.map((user) => (
-                    <li key={user.id}>
-                        {user.name}
+                    <li key={user.user_id}>
+                        <img 
+                            src={user.picture_path}
+                            alt={user.name}
+                            width="100"
+                        />
+
+                        <h2>{user.name}</h2>
+
+                        <p>{user.description}</p>
                     </li>
                 ))}
             </ul>
