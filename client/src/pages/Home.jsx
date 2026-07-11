@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getUsers } from "../services/api.js";
+import { getUsers } from "../services/api";
 
 
 function Home() {
