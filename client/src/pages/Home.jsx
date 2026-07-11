@@ -17,6 +17,10 @@ function Home() {
             });
     }, []);
 
+    console.log("State before render:", users);
+console.log("Array?", Array.isArray(users));
+
+
     return (
 
         <div>
@@ -25,7 +29,7 @@ function Home() {
             <ul>
                 {users.map((user) => (
                     <li key={user.id}>
-                        {JSON.stringify(user)}
+                        {user.name}
                     </li>
                 ))}
             </ul>
