@@ -1,24 +1,24 @@
 import { useEffect, useState } from "react";
-import { getUsers } from "../services/api";
+import { getEvents } from "../services/api";
 
 
 function Home() {
 
-    const [users, setUsers] = useState([]);
+    const [events, setEvents] = useState([]);
 
     useEffect(() => {
-        getUsers()
+        getEvent()
             .then(data => {
                 console.log("Received:", data);
-                setUsers(data);
+                setEvents(data);
             })
             .catch(error => {
                 console.error("Error:", error);
             });
     }, []);
 
-    console.log("State before render:", users);
-console.log("Array?", Array.isArray(users));
+    console.log("State before render:", events);
+console.log("Array?", Array.isArray(events));
 
 
     return (
@@ -26,17 +26,17 @@ console.log("Array?", Array.isArray(users));
         <div>
             <h1>Dashboard page test</h1>
             <ul>
-                {users.map((user) => (
-                    <li key={user.user_id}>
+                {events.map((event) => (
+                    <li key={event.event_id}>
                         <img 
-                            src={user.picture_path}
-                            alt={user.name}
+                            src={event.picture_path}
+                            alt={event.name}
                             width="100"
                         />
 
-                        <h2>{user.name}</h2>
+                        <h2>{event.name}</h2>
 
-                        <p>{user.description}</p>
+                        <p>{event.description}</p>
                     </li>
                 ))}
             </ul>
