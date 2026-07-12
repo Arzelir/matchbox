@@ -23,6 +23,8 @@ export default function Allevents() {
     }, []);
 
 
+	console.log("Events:", events);
+
 	return (
 		<main className="events-page">
 			<section className="events-intro">
