@@ -49,10 +49,13 @@ export default function Allevents() {
 
 				<div className="events-container">
 					{events.map((event) => (
-						<EventCard key={event.id} event={event} />
-						<Link to={`/match/${event.id}`}>
-							<button>Find Teammates!</button>
-						</Link>
+						<div key={event.id}>
+							<EventCard event={event} />
+
+							<Link to={`/match/${event.id}`}>
+								<button>Find Teammates!</button>
+							</Link>
+						</div>
 					))}
 				</div>
 			</section>
