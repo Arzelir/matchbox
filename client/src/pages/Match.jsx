@@ -2,9 +2,10 @@ import "./Match.css";
 import { useEffect, useState } from "react";
 import { HiX, HiCheck } from "react-icons/hi";
 import { getMatches, addUserToTeam } from "../services/api";
+import { useParams } from "react-router-dom";
 
 function MatchPage() {
-	const eventId = 1; // whichever event is being matched
+	const { eventId } = useParams();
 
 	const [players, setPlayers] = useState([]);
 	const [currentIndex, setCurrentIndex] = useState(0);
@@ -13,7 +14,7 @@ function MatchPage() {
 		getMatches(eventId).then((data) => {
 			setPlayers(data);
 		});
-	}, []);
+	}, [eventId]);
 
 	const currentMatch = players[currentIndex];
 

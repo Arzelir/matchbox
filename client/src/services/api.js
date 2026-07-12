@@ -106,8 +106,8 @@ export async function getTeams() {
 
 // Match functions
 
-export async function getMatches() {
-    const response = await fetch("/api/match");
+export async function getMatches(eventId) {
+    const response = await fetch(`/api/match?eventId=${eventId}`);
     return response.json();
 }
 
