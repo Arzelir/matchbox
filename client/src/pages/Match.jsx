@@ -18,6 +18,8 @@ function MatchPage() {
 
 	const currentMatch = players[currentIndex];
 
+	console.log(currentMatch.picture_path);
+
 	async function handleChoice() {
 		if (!currentMatch) return;
 
