@@ -52,7 +52,7 @@ export default function Allevents() {
 				</p>
 
 				<div className="join-buttons">
-					<Link to="/match">
+					<Link to="/api/match?eventId=1">
 						<button>Find Teammates!</button>
 					</Link>
 				</div>
