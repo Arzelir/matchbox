@@ -2,6 +2,7 @@ import "./EventCard.css";
 import { Link } from "react-router-dom";
 
 export default function EventCard({ event }) {
+	console.log(event);
 	return (
 		<div className="event-card">
 			<h3>{event.name}</h3>
