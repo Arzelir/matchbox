@@ -10,17 +10,17 @@ export default function Allevents() {
 	// Later replace this with data fetched from your database
 	const [events, setEvents] = useState([]);
 
-    // Fetching data from API for Events
-    useEffect(() => {
-        getEvents()
-            .then(data => {
-                console.log("Received:", data);
-                setEvents(data);
-            })
-            .catch(error => {
-                console.error("Error:", error);
-            });
-    }, []);
+	// Fetching data from API for Events
+	useEffect(() => {
+		getEvents()
+			.then(data => {
+				console.log("Received:", data);
+				setEvents(data);
+			})
+			.catch(error => {
+				console.error("Error:", error);
+			});
+	}, []);
 
 
 	console.log("Events:", events);
@@ -50,6 +50,9 @@ export default function Allevents() {
 				<div className="events-container">
 					{events.map((event) => (
 						<EventCard key={event.id} event={event} />
+						<Link to={`/match/${event.id}`}>
+							<button>Find Teammates!</button>
+						</Link>
 					))}
 				</div>
 			</section>

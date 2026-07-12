@@ -17,10 +17,6 @@ export default function EventCard({ event }) {
 			</p>
 
 			<p>{event.description}</p>
-
-			<Link to={`/match/${event.event_id}`}>
-				<button>Find Teammates!</button>
-			</Link>
 		</div>
 	);
 }
