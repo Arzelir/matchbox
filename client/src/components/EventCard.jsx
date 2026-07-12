@@ -1,7 +1,10 @@
 import "./EventCard.css";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { getEvents, getUsers, getTeams, getUserById } from "../services/api";
+import { getEvents } from "../services/api";
+
+
+    const [events, setEvents] = useState([]);
 
     // Fetching data from API for Events
     useEffect(() => {
