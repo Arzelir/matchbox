@@ -1,5 +1,19 @@
 import "./EventCard.css";
 import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { getEvents, getUsers, getTeams, getUserById } from "../services/api";
+
+    // Fetching data from API for Events
+    useEffect(() => {
+        getEvents()
+            .then(data => {
+                console.log("Received:", data);
+                setEvents(data);
+            })
+            .catch(error => {
+                console.error("Error:", error);
+            });
+    }, []);
 
 export default function EventCard({ event }) {
 	console.log(event);
