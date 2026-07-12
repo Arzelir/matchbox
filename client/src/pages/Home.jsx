@@ -1,52 +1,37 @@
-import { useEffect, useState } from "react";
-import { getUsers } from "../services/api";
+import "./Home.css";
+import logotype from "../assets/logoType.png";
 
-function Home() {
-	const [users, setUsers] = useState([]);
-
-	useEffect(() => {
-		getUsers()
-			.then((data) => {
-				console.log("Received:", data);
-				setUsers(data);
-			})
-			.catch((error) => {
-				console.error("Error:", error);
-			});
-	}, []);
-
-	console.log("State before render:", users);
-	console.log("Array?", Array.isArray(users));
-
+export default function Home() {
 	return (
-		<div>
-			<h1>Home Page Test</h1>
-			<h1>Dashboard</h1>
-			<ul>
-				{users.map((user) => (
-					<li key={user.id}>{user.name}</li>
-				))}
-			</ul>
-			<h1>
-				UofT Website <br /> Development Club
-			</h1>
-			<br />
-			<br />
-			<br />
-			<br />
-			<br />
-			<h2>Real development skills for real projects. </h2>
-			<h1>
-				UofT Website <br /> Development Club
-			</h1>
-			<br />
-			<br />
-			<br />
-			<br />
-			<br />
-			<h2>Real development skills for real projects. </h2>
-		</div>
+		<main className="home-page">
+			{/* Hero Section */}
+			<section className="hero">
+				<img src={logotype} alt="Matchbox Logo" className="hero-logo" />
+
+				<p className="hero-description">
+					Matchbox connects students through events, clubs, and shared
+					interests. Meet new people, discover opportunities, and become part of
+					a growing community.
+				</p>
+			</section>
+
+			{/* About */}
+			<section className="about">
+				<h2>About</h2>
+
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vel
+					orci non turpis ultrices malesuada. Donec faucibus, lorem eget
+					volutpat facilisis, nisl odio commodo erat, vitae posuere velit lectus
+					sed purus.
+				</p>
+
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed viverra,
+					neque non feugiat faucibus, purus justo luctus risus, vitae viverra
+					nunc metus sed tortor.
+				</p>
+			</section>
+		</main>
 	);
 }
-
-export default Home;

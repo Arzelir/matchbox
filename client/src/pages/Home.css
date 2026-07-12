@@ -1,0 +1,44 @@
+.home-page {
+	max-width: 80%;
+	margin: auto;
+	padding: 80px 40px;
+
+	display: flex;
+	flex-direction: column;
+	gap: 100px;
+}
+
+.hero {
+	display: flex;
+	flex-direction: column;
+
+	align-items: center;
+	text-align: center;
+	gap: 30px;
+}
+
+.hero-logo {
+	width: 450px;
+	max-width: 90%;
+}
+
+.hero-description {
+	font-size: 1.3rem;
+	line-height: 1.8;
+}
+
+.about {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.about h2 {
+	font-size: 2.8rem;
+	margin: 0;
+}
+
+.about p {
+	font-size: 1.1rem;
+	line-height: 1.8;
+}
