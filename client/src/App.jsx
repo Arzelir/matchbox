@@ -2,9 +2,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useState } from "react";
 
 import Navbar from "./components/Navbar";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "./assets/vite.svg";
-import heroImg from "./assets/hero.png";
+import BackToTop from "./components/BackToTop";
+
 import "./App.css";
 import Dashboard from "./pages/Dashboard";
 
@@ -25,8 +24,9 @@ function App() {
 
 				<Route path="/match/:eventId" element={<Match />} />
 				<Route path="/contact" element={<Contact />} />
-        <Route path="/events" element={<Allevents />} />
+				<Route path="/events" element={<Allevents />} />
 			</Routes>
+			<BackToTop />
 		</BrowserRouter>
 	);
 }

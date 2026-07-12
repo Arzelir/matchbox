@@ -1,0 +1,46 @@
+.back-to-top {
+	position: fixed;
+	bottom: 30px;
+	right: 30px;
+
+	width: 4.5vw;
+	height: 4.5vw;
+
+	border-radius: 50%;
+	border: 2px solid rgba(10, 38, 131, 0.2);
+
+	background: rgb(143, 53, 11);
+	backdrop-filter: blur(8px);
+
+	color: white;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	transition: all 0.25s ease;
+}
+
+.back-to-top:hover {
+	transform: scale(1.2);
+	background: rgb(143, 53, 11);
+}
+
+.back-to-top svg {
+	color: #ffbb00;
+	width: 4vw;
+	height: 4vw;
+}
+
+.back-to-top {
+	opacity: 0;
+	transform: translateY(20px);
+	animation: fadeInUp 1s forwards;
+}
+
+@keyframes fadeInUp {
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
