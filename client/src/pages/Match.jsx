@@ -13,7 +13,7 @@ function MatchPage() {
 
     useEffect(() => {
 
-        getPlayersLookingForTeam(eventId)
+        getMatches(eventId)
             .then(data => {
                 setPlayers(data);
             });
