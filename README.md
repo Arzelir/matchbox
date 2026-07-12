@@ -1,3 +1,6 @@
+<img width="3906" height="1762" alt="logoLetter" src="https://github.com/user-attachments/assets/a6359015-74f5-456a-95cf-02872d30f29a" />
+
+
 ## Inspiration
 
 When trying new sports, it can be challenging to meet new people and make teams. Many people trying new sports often try playing in community events or small tournaments, but may not have enough friends interested in participating or people who share their interest. By creating a way for people to register for events and match with teammates who share their interests, we aim to make it easier for new players to join games.
