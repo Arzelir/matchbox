@@ -1,6 +1,6 @@
 import "./Contact.css";
 
-import { FaInstagram, FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
+import { FaInstagram, FaGithub, FaLinkedin, FaLink } from "react-icons/fa";
 
 export default function Contact() {
 	return (
@@ -11,17 +11,18 @@ export default function Contact() {
 				<p>
 					Have a question, want to collaborate, or interested in joining the
 					team? Feel free to reach out through any of the links below. We would
-					love to hear from you.
+					love to hear from you! Lastly, if you want to learn more about United
+					Hacks, you can take a look at their website as well!
 				</p>
 
 				<div className="contact-links">
-					<a href="mailto:example@email.com">
-						<FaEnvelope />
-						Email
+					<a href="https://unitedhacks.hackunited.org/">
+						<FaLink />
+						United Hacks
 					</a>
 
 					<a
-						href="https://instagram.com/design.shatat"
+						href="https://instagram.com"
 						target="_blank"
 						rel="noopener noreferrer"
 					>
@@ -30,7 +31,7 @@ export default function Contact() {
 					</a>
 
 					<a
-						href="https://github.com/shatat-ah"
+						href="https://github.com/Arzelir/matchbox"
 						target="_blank"
 						rel="noopener noreferrer"
 					>
@@ -39,7 +40,7 @@ export default function Contact() {
 					</a>
 
 					<a
-						href="https://linkedin.com/in/yourusername"
+						href="https://linkedin.com"
 						target="_blank"
 						rel="noopener noreferrer"
 					>

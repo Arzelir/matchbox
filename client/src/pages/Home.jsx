@@ -9,9 +9,10 @@ export default function Home() {
 				<img src={logotype} alt="Matchbox Logo" className="hero-logo" />
 
 				<p className="hero-description">
-					Matchbox connects students through events, clubs, and shared
-					interests. Meet new people, discover opportunities, and become part of
-					a growing community.
+					Matchbox connects players, amateurs and professionals alike, through
+					events, clubs, and shared interests in different sports. Meet new
+					people, discover opportunities, and become part of a growing
+					community.
 				</p>
 			</section>
 
@@ -20,16 +21,12 @@ export default function Home() {
 				<h2>About</h2>
 
 				<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vel
-					orci non turpis ultrices malesuada. Donec faucibus, lorem eget
-					volutpat facilisis, nisl odio commodo erat, vitae posuere velit lectus
-					sed purus.
-				</p>
-
-				<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed viverra,
-					neque non feugiat faucibus, purus justo luctus risus, vitae viverra
-					nunc metus sed tortor.
+					Matchbox was made by two developers (Us!), as a project submission in
+					2026 for United Hacks V7, an annual online hackathon event. Although
+					it's not an officially published project, the prototype can be seen
+					anytime you visit our Vercel website! We had an amazing time working
+					on this project and would love to make a complete product using this
+					idea!
 				</p>
 			</section>
 		</main>

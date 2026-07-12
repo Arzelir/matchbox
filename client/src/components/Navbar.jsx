@@ -40,7 +40,7 @@ export default function Navbar() {
 
 				<li>
 					<a
-						href="https://instagram.com/design.shatat"
+						href="https://instagram.com"
 						target="_blank"
 						rel="noopener noreferrer"
 					>
@@ -50,7 +50,7 @@ export default function Navbar() {
 
 				<li>
 					<a
-						href="https://github.com/shatat-ah"
+						href="https://github.com/Arzelir/matchbox"
 						target="_blank"
 						rel="noopener noreferrer"
 					>
@@ -60,7 +60,7 @@ export default function Navbar() {
 
 				<li>
 					<a
-						href="https://linkedin.com/in/yourusername"
+						href="https://linkedin.com"
 						target="_blank"
 						rel="noopener noreferrer"
 					>

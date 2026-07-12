@@ -46,9 +46,10 @@ export default function Allevents() {
 				<h1>Events</h1>
 
 				<p>
-					Join our workshops, team projects, and community events. Whether you
-					are interested in development, design, or learning new skills, there
-					is a place for you on our team.
+					Look for local practice matches, team building exercises, and
+					community events. Whether you are interested in a new sport, looking
+					for a match, or learning new skills, there is a place for you on one
+					of the available teams.
 				</p>
 
 				<div className="join-buttons">
