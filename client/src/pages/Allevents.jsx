@@ -2,43 +2,26 @@ import "./Allevents.css";
 
 import EventCard from "../components/EventCard";
 import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { getEvents } from "../services/api";
 
 export default function Allevents() {
 	// Placeholder data
 	// Later replace this with data fetched from your database
-	const events = [
-		{
-			id: 1,
-			title: "Workshop",
-			date: "September 15, 2026",
-			location: "University of Toronto",
-			description:
-				"Learn the basics of modern web development by building a React application.",
-		},
-		{
-			id: 2,
-			title: "Design Sprint",
-			date: "October 3, 2026",
-			location: "Online",
-			description:
-				"Collaborate with designers and developers to prototype new ideas.",
-		},
-		{
-			id: 2,
-			title: "Design Sprint",
-			date: "October 3, 2026",
-			location: "Online",
-			description:
-				"Collaborate with designers and developers to prototype new ideas.",
-		},
-		{
-			id: 3,
-			title: "Hackathon",
-			date: "November 20, 2026",
-			location: "UTSC Campus",
-			description: "Build a project with a team and showcase your skills.",
-		},
-	];
+	const [events, setEvents] = useState([]);
+
+    // Fetching data from API for Events
+    useEffect(() => {
+        getEvents()
+            .then(data => {
+                console.log("Received:", data);
+                setEvents(data);
+            })
+            .catch(error => {
+                console.error("Error:", error);
+            });
+    }, []);
+
 
 	return (
 		<main className="events-page">
