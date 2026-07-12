@@ -36,7 +36,6 @@ function MatchPage() {
 			<div className="match-container">
 				<div className="match-image">
 					<img src={currentMatch.picture_path} alt={currentMatch.name} />
-					console.log(currentMatch.picture_path);
 				</div>
 
 				<div className="match-sidebar">
