@@ -16,7 +16,7 @@ export default function EventCard({ event }) {
 
 			<p>{event.description}</p>
 
-			<Link to="/match">
+			<Link to={`/match/${event.id}`}>
 				<button>Find Teammates!</button>
 			</Link>
 		</div>
