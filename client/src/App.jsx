@@ -11,6 +11,7 @@ import Dashboard from "./pages/Dashboard";
 import Home from "./pages/Home";
 import Contact from "./pages/Contact";
 import Match from "./pages/Match";
+import Allevents from "./pages/Allevents";
 
 function App() {
 	const [count, setCount] = useState(0);
@@ -24,6 +25,7 @@ function App() {
 
 				<Route path="/match" element={<Match />} />
 				<Route path="/contact" element={<Contact />} />
+        <Route path="/events" element={<Allevents />} />
 			</Routes>
 		</BrowserRouter>
 	);

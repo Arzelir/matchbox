@@ -7,8 +7,6 @@ import { HashLink } from "react-router-hash-link";
 
 import { FaInstagram, FaGithub, FaLinkedin } from "react-icons/fa";
 
-
-
 export default function Navbar() {
 	return (
 		<nav className="navbar">
@@ -28,7 +26,7 @@ export default function Navbar() {
 
 				{/* DESIGN */}
 				<li className="dropdown">
-					<Link to="/match">Events</Link>
+					<Link to="/events">Events</Link>
 				</li>
 
 				{/* DEVELOPMENT */}
