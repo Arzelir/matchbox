@@ -1,46 +1,104 @@
-import "./Match.css";
-import { HiCheck, HiX } from "react-icons/hi";
+import { useEffect, useState } from "react";
+import { HiX, HiCheck } from "react-icons/hi";
+import { getPlayersLookingForTeam, addUserToTeam } from "../services/api";
 
-export default function Match() {
-	// Placeholder data
-	const currentMatch = {
-		image: "/bg.png",
-		title: "John Doe",
-		age: 24,
-		location: "Toronto, ON",
-		bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. This will eventually come from your database.",
-		interests: ["Photography", "Hiking", "Coffee", "Movies", "Gaming"],
-	};
 
-	return (
-		<main className="match-page">
-			<div className="match-container">
-				<div className="match-image">
-					<img src={currentMatch.image} alt={currentMatch.title} />
-				</div>
+function MatchPage() {
 
-				<div className="match-sidebar">
-					<section className="match-info">
-						<h1>
-							{currentMatch.title}, {currentMatch.age}
-						</h1>
+    const eventId = 1; // whichever event is being matched
 
-						<h3>{currentMatch.location}</h3>
+    const [players, setPlayers] = useState([]);
+    const [currentIndex, setCurrentIndex] = useState(0);
 
-						<p>{currentMatch.bio}</p>
-					</section>
 
-					<section className="match-buttons">
-						<button className="reject-btn">
-							<HiX />
-						</button>
+    useEffect(() => {
 
-						<button className="accept-btn">
-							<HiCheck />
-						</button>
-					</section>
-				</div>
-			</div>
-		</main>
-	);
+        getPlayersLookingForTeam(eventId)
+            .then(data => {
+                setPlayers(data);
+            });
+
+    }, []);
+
+
+    const currentMatch = players[currentIndex];
+
+
+    async function handleChoice() {
+
+        if (!currentMatch) return;
+
+
+        await addUserToTeam(
+            currentMatch.user_id,
+            eventId
+        );
+
+
+        // move to next player
+        setCurrentIndex(currentIndex + 1);
+    }
+
+
+    if (!currentMatch) {
+        return <h1>No more players</h1>;
+    }
+
+
+    return (
+
+        <main className="match-page">
+
+            <div className="match-container">
+
+                <div className="match-image">
+                    <img 
+                        src={currentMatch.picture_path}
+                        alt={currentMatch.name}
+                    />
+                </div>
+
+
+                <div className="match-sidebar">
+
+                    <section className="match-info">
+
+                        <h1>
+                            {currentMatch.name}
+                        </h1>
+
+                        <p>
+                            {currentMatch.description}
+                        </p>
+
+                    </section>
+
+
+                    <section className="match-buttons">
+
+                        <button 
+                            className="reject-btn"
+                            onClick={handleChoice}
+                        >
+                            <HiX />
+                        </button>
+
+
+                        <button 
+                            className="accept-btn"
+                            onClick={handleChoice}
+                        >
+                            <HiCheck />
+                        </button>
+
+                    </section>
+
+                </div>
+
+            </div>
+
+        </main>
+    );
 }
+
+export default MatchPage;

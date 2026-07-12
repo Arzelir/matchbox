@@ -103,3 +103,10 @@ export async function getTeams() {
     const response = await fetch("/api/team");
     return response.json();
 }
+
+// Match functions
+
+export async function getMatches() {
+    const response = await fetch("/api/match");
+    return response.json();
+}
