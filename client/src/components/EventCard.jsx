@@ -1,3 +1,6 @@
+import "./EventCard.css";
+import { Link } from "react-router-dom";
+
 export default function EventCard({ event }) {
 	return (
 		<div className="event-card">
@@ -13,7 +16,9 @@ export default function EventCard({ event }) {
 
 			<p>{event.description}</p>
 
-			<button>Learn More</button>
+			<Link to="/match">
+				<button>Find Teammates!</button>
+			</Link>
 		</div>
 	);
 }
