@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { HiX, HiCheck } from "react-icons/hi";
-import { getPlayersLookingForTeam, addUserToTeam } from "../services/api";
+import { getMatches, addUserToTeam } from "../services/api";
 
 
 function MatchPage() {

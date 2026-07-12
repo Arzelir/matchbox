@@ -110,3 +110,21 @@ export async function getMatches() {
     const response = await fetch("/api/match");
     return response.json();
 }
+
+// Register user for event
+
+export async function addUserToTeam(userId, eventId) {
+
+    const response = await fetch("/api/registration", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            userId,
+            eventId
+        })
+    });
+
+    return await response.json();
+}
